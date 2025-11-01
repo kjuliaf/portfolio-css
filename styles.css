@@ -19,6 +19,8 @@ body {
 
 ul {
 	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 a {
@@ -29,6 +31,7 @@ a {
 button {
 	background: none;
 	border: none;
+	color: inherit;
 }
 
 /* Globals */
@@ -37,6 +40,12 @@ body {
 	color: var(--color-neutral-900);
 	font-family: var(--font-family-base);
 	font-size: 1em;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,6 +69,9 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: var(--color-accent);
 	color: var(--color-primary);
 }
+
+
+/* ------------ HOME PAGE ---------- */
 
 /* Header and Hero */
 .header-hero-container {
@@ -132,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 	/* hover etc */
 }
 
+/* Hamburger Navigation */
 .btn--hamburger {
 	color: var(--color-neutral-000);
 }
@@ -140,6 +153,46 @@ h1, h2, h3, h4, h5, h6 {
 	.btn--hamburger {
 		display: none;
 	}
+}
+
+.navigation--hamburger {
+	position: fixed;
+	display: none;
+	inset: 0;
+	background-color: var(--color-background);
+	color: var(--color-primary);
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.navigation--hamburger.active {
+	display: flex; 
+}
+
+@media (min-width: 600px) {
+	.navigation--hamburger {
+		display: none;
+	}
+
+	.navigation--hamburger.active {
+		display: none; 
+	}
+}
+
+.btn--close {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	font-size: 2em;
+}
+
+.navigation--hamburger__list {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5em;
+	font-size: 1.25em;
+	text-align: center;
 }
 
 /* Hero Section */
@@ -160,3 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 1em;
 }
 
+/* About Section */
+.about {
+	margin: 4em clamp(1em, 5vw, 6em);
+}

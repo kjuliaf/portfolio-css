@@ -12,10 +12,14 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<!-- Header and Hero -->
 	<div class="header-hero-container">
 		<div class="header-hero">
+			<!-- Header -->
 			<header class="header">
 				<a href="/"><img class="logo" src="./resources/logo.png" alt="Logo"></a>
+
+				<!-- Navigation -->
 				<nav class="navigation">
 					<ul class="navigation__list">
 						<li class="navigation__list-item"><a href="/about.html">About</a></li>
@@ -23,8 +27,22 @@
 						<li class="navigation__list-item"><a class="btn btn--accent" href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-				<button class="btn btn--hamburger">Menu</button>
+
+				<!-- Hamburger Menu Button -->
+				<button id="open-menu" class="btn btn--hamburger">Menu</button>
 			</header>
+
+			<!-- Hamburger Menu -->
+			<nav id="hamburger-menu" class="navigation--hamburger">
+				<button id="close-menu" class="btn btn--close">X</button>
+				<ul class="navigation--hamburger__list">
+					<li class="navigation--hamburger__list-item"><a href="/about.html">About</a></li>
+					<li class="navigation--hamburger__list-item"><a href="/projects.html">Projects</a></li>
+					<li class="navigation--hamburger__list-item"><a class="btn btn--accent" href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Hero Section -->
 			<div class="hero">
 				<h1 class="hero__title">Hi, I'm Julia. <br>
 					A Software Engineer.
@@ -33,5 +51,27 @@
 			</div>
 		</div>
 	</div>
+
+	<main>
+		<section class="about">
+			<div>
+				<p>01 About</p>
+				<h2>With an interest for problem solving...</h2>
+				<p>...and curiosity for technology and innovation, it was clear that I would focus my studies on computer science. I have experience working with fullstack web development, and improving user experience through interactivity and an attention to detail.</p>
+				<div>
+					<img src="" alt="Design icon">
+					<p>M.Sc in Interaction Technology and Design (2022-2027)</p>
+				</div>
+				<div>
+					<img src="" alt="Coding icon">
+					<p>B.Sc in Computer Science (2022-2027)</p>
+				</div>
+				<a href="btn">More about me</a>
+			</div>
+			<img src="./resources/about-image.jpg" alt="About me image">
+		</section>
+	</main>
+
+	<script src="script.js"></script>
 </body>
 </html>
