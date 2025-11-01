@@ -4,8 +4,51 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>About | Portfolio</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	
+	<!-- Header and Hero -->
+	<div class="header-hero-container">
+		<div class="header-hero">
+			<!-- Header -->
+			<header class="header">
+				<a href="/"><img class="logo" src="./resources/logo.png" alt="Logo"></a>
+
+				<!-- Navigation -->
+				<nav class="navigation">
+					<ul class="navigation__list">
+						<li class="navigation__list-item"><a href="/about.html">About</a></li>
+						<li class="navigation__list-item"><a href="/projects.html">Projects</a></li>
+						<li class="navigation__list-item"><a class="btn btn--accent" href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+
+				<!-- Hamburger Menu Button -->
+				<button id="open-menu" class="btn btn--hamburger">Menu</button>
+			</header>
+
+			<!-- Hamburger Menu -->
+			<nav id="hamburger-menu" class="navigation--hamburger">
+				<button id="close-menu" class="btn btn--close">X</button>
+				<ul class="navigation--hamburger__list">
+					<li class="navigation--hamburger__list-item"><a href="/about.html">About</a></li>
+					<li class="navigation--hamburger__list-item"><a href="/projects.html">Projects</a></li>
+					<li class="navigation--hamburger__list-item"><a class="btn btn--accent" href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<!-- Hero Section -->
+			<div class="hero">
+				<h1 class="hero__title">About</h1>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
