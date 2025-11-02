@@ -32,7 +32,7 @@
 				<button id="open-menu" class="btn btn--hamburger">Menu</button>
 			</header>
 
-			<!-- Hamburger Menu -->
+			<!-- Hamburger Menu (Smaller Screens) -->
 			<nav id="hamburger-menu" class="navigation--hamburger">
 				<button id="close-menu" class="btn btn--close">X</button>
 				<ul class="navigation--hamburger__list">
@@ -53,22 +53,43 @@
 	</div>
 
 	<main>
+		<!-- About Section -->
 		<section class="about">
+			<!-- Description -->
 			<div>
-				<p>01 About</p>
-				<h2>With an interest for problem solving...</h2>
+				<p class="badge badge--primary">01 About</p>
+				<h2 class="about__title">With an interest for problem solving...</h2>
 				<p>...and curiosity for technology and innovation, it was clear that I would focus my studies on computer science. I have experience working with fullstack web development, and improving user experience through interactivity and an attention to detail.</p>
-				<div>
-					<img src="" alt="Design icon">
-					<p>M.Sc in Interaction Technology and Design (2022-2027)</p>
+
+				<!-- Education Information -->
+				<div class="about__points-container">
+					<div class="about__point">
+						<img class="about__point-icon" src="./resources/student.svg" alt="Student icon">
+						<p class="about__point-text">M.Sc in Interaction Technology and Design (2022-2027)</p>
+					</div>
+					<div class="about__point">
+						<img class="about__point-icon" src="./resources/coding.svg" alt="Coding icon">
+						<p class="about__point-text">B.Sc in Computer Science (2022-2027)</p>
+					</div>
 				</div>
-				<div>
-					<img src="" alt="Coding icon">
-					<p>B.Sc in Computer Science (2022-2027)</p>
-				</div>
-				<a href="btn">More about me</a>
+
+				<!-- More About Me Button -->
+				<a class="about__btn about__btn-first btn btn--primary" href="/about.html">
+					More about me
+					<img class="btn__icon" src="./resources/arrow-right-white.svg" alt="Arrow right">
+				</a>
 			</div>
-			<img src="./resources/about-image.jpg" alt="About me image">
+
+			<!-- About Me Image -->
+			<img class="about__img" src="./resources/about-img.png" alt="Image of me">
+			<br>
+
+			<!-- More About Me Button Placement (Smaller Screens) -->
+			<a class="about__btn about__btn-second btn btn--primary" href="/about.html">
+				More about me
+				<img class="btn__icon" src="./resources/arrow-right-white.svg" alt="Arrow right">
+			</a>
+
 		</section>
 	</main>
 
