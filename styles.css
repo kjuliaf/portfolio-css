@@ -202,7 +202,27 @@ main {
 }
 
 .navigation__list-item {
-	/* hover etc */
+	position: relative;
+	display: inline-block;
+	padding-bottom: 6px;
+}
+
+.navigation__list-item::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0%;
+	height: 1px;
+	background-color: var(--color-accent);
+	opacity: 0;
+	transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.navigation__list-item:hover::after,
+.navigation__list-item.active::after {
+	width: 100%;
+	opacity: 1;
 }
 
 /* Hamburger Navigation */
@@ -254,6 +274,10 @@ main {
 	gap: 2em;
 	font-size: 1.25em;
 	text-align: center;
+}
+
+.navigation--hamburger__list-item.active {
+	font-weight: 600;
 }
 
 /* Hero Section */
@@ -486,6 +510,7 @@ main {
 	margin: 1em auto 0;
 	border-radius: 6px 6px 0 0;
 	object-fit: cover;
+	box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 600px) {
