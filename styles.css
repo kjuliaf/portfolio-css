@@ -11,6 +11,7 @@
 	--color-secondary: #2E2825;
 	--color-accent: #D9CEF4;
 	--color-background: #FAF3E3;
+	--color-background-dark: #EAE1CE;
 	--color-neutral-000: #FFFFFF;
 	--color-neutral-900: #252525;
 
@@ -665,5 +666,79 @@ main {
 @media (min-width: 650px) {
 	.all-projects {
 		margin: 4em var(--padding-x);
+	}
+}
+
+.all-projects__cases-container {
+	margin-top: 3em;
+	display: grid;
+	gap: 2em;
+}
+
+@media (min-width: 650px) {
+	.all-projects__cases-container {
+		margin-top: 4em;
+	}
+}
+
+.all-projects__title {
+	color: var(--color-primary);
+}
+
+.all-projects__case {
+	background: var(--color-background-dark);
+	border-radius: 15px;
+	padding: 0 clamp(1em, 6vw, 12em);
+	padding-top: 2em;
+}
+
+@media (min-width: 800px) {
+	.all-projects__case {
+		display: grid;
+		gap: 4em;
+		grid-template-columns: 3fr 2fr;
+		align-items: center;
+	}
+}
+
+.all-projects__case-title {
+	color: var(--color-primary);
+	font-size: 1.25em;
+}
+
+@media (min-width: 650px) {
+	.all-projects__case-title {
+		font-size: 1.5em;
+	}
+}
+
+.all-projects__case-tech-stack {
+	color: var(--color-primary);
+	font-weight: 500;
+}
+
+.all-projects__case-description {
+	margin-top: 1em;
+	padding-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+	.all-projects__case-description {
+		padding-bottom: 3em;
+	}
+}
+
+.all-projects__case-img {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	border-radius: 6px 6px 0 0;
+	object-fit: cover;
+}
+
+@media (min-width: 800px) {
+	.all-projects__case-img {
+		padding-top: 2em;
 	}
 }
