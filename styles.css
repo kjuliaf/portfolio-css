@@ -739,6 +739,6 @@ main {
 
 @media (min-width: 800px) {
 	.all-projects__case-img {
-		padding-top: 2em;
+		margin-top: 2em;
 	}
 }
